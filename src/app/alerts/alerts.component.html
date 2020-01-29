@@ -1,0 +1,28 @@
+<mat-toolbar data-cy="pxb-toolbar" color="primary" *ngIf="!searchVisible" >
+	<h1>Alerts</h1>
+</mat-toolbar>
+
+  
+<mat-nav-list *ngIf="data.length > 0">
+	<mat-list-item *ngFor="let i of data | filter: searchText" >
+		<div mat-line>
+			{{ i.name }}
+		</div>
+		<p mat-line>
+			{{ i.details }}
+		</p>
+		<button data-cy="action-menu" mat-icon-button [matMenuTriggerFor]="menu"  (click)="menuTrigger.openMenu()">
+			<mat-icon>more_vert</mat-icon>
+		</button>
+		<mat-menu #menu="matMenu">
+			<button data-cy="remove" mat-menu-item (click)="onRemoveItem(i)">Remove</button>
+			<button data-cy="details" mat-menu-item>View Details</button>
+		</mat-menu>
+	</mat-list-item>
+</mat-nav-list>
+<div *ngIf="data.length === 0" style="margin: 15px;">
+	<h1>No Items found </h1>
+	<button data-cy="add-item" mat-raised-button (click)="onAddItem()">
+		Add An Item
+	</button>
+</div>

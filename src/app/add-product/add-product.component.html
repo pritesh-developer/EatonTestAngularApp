@@ -1,0 +1,46 @@
+<mat-toolbar color="primary">
+  <div> Products</div>
+</mat-toolbar>
+<section class="mat-typography">
+  <h2>Add Product</h2>
+  
+  <mat-card>
+    <form [formGroup]='userForm'>
+      <mat-form-field>
+        <mat-label>Input</mat-label>
+        <input matInput placeholder="Input" formControlName="inputFC" required type="telphone">
+        <mat-icon *ngIf="userForm?.controls?.inputFC.touched" matSuffix [ngClass]="userForm?.controls?.inputFC.errors ? 'failure' : 'success'">{{userForm?.controls?.inputFC.errors
+          ? 'clear' : 'done' }}</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="Enter your email" formControlName="email" required>
+        <mat-icon *ngIf="userForm?.controls?.email.touched" matSuffix [ngClass]="userForm?.controls?.email.errors ? 'failure' : 'success'">{{userForm?.controls?.email.errors
+          ? 'clear' : 'done' }}</mat-icon>
+        <mat-error *ngIf="userForm.get('email').hasError('pattern')">Invalid email address</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Phone number</mat-label>
+        <input matInput placeholder="Phone Number" formControlName="phoneNumber" (keypress)="numberOnly($event)"
+          required maxlength="22">
+        <mat-icon *ngIf="userForm?.controls?.phoneNumber.touched" matSuffix [ngClass]="userForm?.controls?.phoneNumber.errors ? 'failure' : 'success'">{{userForm?.controls?.phoneNumber.errors
+          ? 'clear' : 'done' }}</mat-icon>
+        <mat-error *ngIf="userForm.get('phoneNumber').hasError('pattern')">invalid phone number</mat-error>
+      </mat-form-field>
+	  <button
+                    type="button"
+                    mat-raised-button
+                    color="primary"
+                    data-cy="login-btn"
+                    class="login"
+					(click)="addProduct()"
+					[disabled]="!userForm.valid"
+                >
+                    SUBMIT
+        </button>
+    </form>
+  </mat-card>
+
+</section>
