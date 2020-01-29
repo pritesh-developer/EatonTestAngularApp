@@ -1,50 +1,21 @@
-# Login Example
-This project demonstrates how to build a basic login page with authentication, route blocking, forgot password and registration workflows.
+# Angular app with login , dahsboard , hide and expandable side navigation bar, Item lists with action , Search , Add form , charts , login, registration , logout. 
 
-| Framework           | Status       | Live Examples  |
-| ---------------- |--------------|------------------|
-| Angular | [![CircleCI](https://circleci.com/gh/pxblue/login/tree/angular.svg?style=shield)](https://circleci.com/gh/pxblue/login/tree/angular) | [View on Stackblitz](https://stackblitz.com/github/pxblue/login/tree/angular)
-| React | [![CircleCI](https://circleci.com/gh/pxblue/login/tree/react.svg?style=shield)](https://circleci.com/gh/pxblue/login/tree/react) | [View on Code Sandbox](https://codesandbox.io/s/github/pxblue/login/tree/react)
-| Ionic | [![CircleCI](https://circleci.com/gh/pxblue/login/tree/ionic.svg?style=shield)](https://circleci.com/gh/pxblue/login/tree/ionic) | [View on Stackblitz](https://stackblitz.com/github/pxblue/login/tree/ionic)
-| React Native | [![CircleCI](https://circleci.com/gh/pxblue/login/tree/reactnative.svg?style=shield)](https://circleci.com/gh/pxblue/login/tree/reactnative) | [View on Snack](https://snack.expo.io/@git/github.com/pxblue/login@reactnative?preview=true&platform=ios)
+Once you run the app you will see a login page , you can login or register.
+Then you can login putting valid email id.
+After login dashboard will be opened. you can open the minimized hide bar to open it. 
 
-## Running the Example
-### Angular
-```
-git clone https://github.com/pxblue/login -b angular
-cd login
-yarn && yarn start
-```
-For additional information read our [Angular Guide](https://pxblue.github.io/development/frameworks-web/angular) and our [Environment Setup](https://pxblue.github.io/development/environment)
+On dashboard Pie chart , Line charts have been displayed. For charts used PXBlue chart npm package 
 
-### React
-```
-git clone https://github.com/pxblue/login -b react
-cd login
-yarn && yarn start
-```
-For additional information read our [React Guide](https://pxblue.github.io/development/frameworks-web/react) and our [Environment Setup](https://pxblue.github.io/development/environment)
+At side navigation bar , menu items have been displayed to redirect to specific module, like products.
 
-### Ionic
-```
-git clone https://github.com/pxblue/login -b ionic
-cd login
-yarn && ionic serve
-```
-To run on a device, add the platform then build and run the project:
-```
-ionic cordova resources
-ionic cordova platform add [android|ios]
-ionic cordova build [android|ios]
-ionic cordova run [android|ios]
-```
-For additional information read our [Ionic Guide](https://pxblue.github.io/development/frameworks-mobile/ionic) and our [Environment Setup](https://pxblue.github.io/development/environment)
+In products module , product list display , actions have been displayed above. On clicking plus , new product can bee added.
 
-### React Native
+For new product addition , new form gets opened. Validation have been applied there.
 
-```
-git clone https://github.com/pxblue/login -b reactnative
-cd login
-yarn && yarn start
-```
-For additional information read our [React Native Guide](https://pxblue.github.io/development/frameworks-mobile/react-native) and our [Environment Setup](https://pxblue.github.io/development/environment)
+To run the app -
+
+ You can run npm install command. Then you need to added chart js package from PXBlue. Also if you are getting error you need to install one or two material package. 
+ 
+ Then yarn start or npm start to run the app. 
+
+
